@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+        <data>
+                <variable
+                    name="m"
+                    type="com.brvTest.myapplication.Test" />
+        </data>
+
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/item"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{m.isChecked ? 0 : 8}"
+                    android:background="@color/common_accent_color"/>
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="#333333"
+                    android:text="@{m.str}" />
+        </FrameLayout>
+</layout>
+
